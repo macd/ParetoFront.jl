@@ -1,0 +1,13 @@
+name = "ParetoFront"
+uuid = "6057110d-cf05-48ab-ad92-b75d7f43cb9e"
+authors = ["Don MacMillen <don@macmillen.net> and contributors"]
+version = "0.1.0"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+julia = "1"
+
+[targets]
+test = ["Test"]
