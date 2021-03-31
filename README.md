@@ -39,3 +39,17 @@ in two dimensions.
 And we can see the four different Pareto frontiers here
 
 ![Pareto frontiers](./images/Figure_1.png)
+
+
+Finally we note that this is fairly simple and direct algorithm. The algorithm
+in [1], on the other hand, is fairly complex. It uses multipass, sorting, 
+windowing, merging and multi-threading. On a test of 500,000 records
+in 7 dimensions, where all the values are between 1 and 10,000, it extracts
+the maximal vectors in about 15 seconds on a 733 MHz Pentium III machine.
+Using ParetoFront on a Intel® Core™ i9-9980HK CPU, single threaded, it
+can extract the maximal vectors in 33 seconds. Of course this is cheating
+in at least two ways, both due to Moore's law. The obvious one is that the
+processors are so much faster. The second is that with 64GB of memory, the
+entire data set fits in main memory and no IO is needed.
+
+  1. ["Maximal Vector Computation in Large Data Sets", R.Godfrey, R. Shipley, J. Gryz, York University Technical Report CS-2004-06](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.92.630&rep=rep1&type=pdf)
